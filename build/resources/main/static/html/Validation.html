@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+<body>
+
+<form id="form" name = "myForm" onsubmit= "return validate()"
+      action = https://www.bbc.co.uk/news>
+    Username <br>
+    <input type = 'text' name="username1"><br>
+    Password <br>
+    <input type = 'password' name="password1"><br>
+    <input type = 'submit'>
+</form>
+
+<a href = "https://www.asda.com/" id="hide" style="display:none;"> Here is a link to the admin page</a>
+
+<script>
+    // login function that will be performed on submit
+    function validate() {
+        var pass = false;
+        var username = (document.forms["myForm"]["username1"].value);
+        var password = (document.forms["myForm"]["password1"].value);
+
+        //usernames
+        var loginNames = ["Employee0", "Employee1", "Employee2", "Employee3", "Employee4", "Employee5",
+            "Employee6", "Employee7", "Employee8", "Employee9", "Employee10", "Employee11", "Employee12", "Employee13", "Employee14"
+            , "Employee15", "Employee16", "Employee17", "Employee18", "Employee19", "Employee20"];
+        // passwords
+        var loginPasswords = ["password0", "password1", "password2", "password3", "password4", "password5", "password6", "password7", "password8", "password9", "password10",
+            "password11", "password12", "password13", "password14", "password15", "password16", "password17", "password18", "password19", "password20",
+        ];
+        var x = 0;
+        for (i = 0; i < loginNames.length; i++) {
+            if (username == "bipSyncAdmin" && password == "adminPassword"){
+                alert("you are the admin");
+                pass = false;
+                x = 1;
+                document.getElementById('hide').style.display='block';
+                break;
+            }
+            else if (username == loginNames[i] && password == loginPasswords[i]) {
+                console.log("hi")
+                pass = true;
+            }
+        }
+        if (pass == false && x !=1){
+            alert("please enter the correct username or password");
+        }
+        return pass;
+    }
+</script>
+</body>
+</html>

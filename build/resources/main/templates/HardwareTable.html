@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <title>Bipsync Asset Register</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="/img/bipsync.png" rel="icon" type="image/x-icon">
+
+  <!-- Favicons -->
+  <link th:src="@{assets/img/favicon.png}" rel="icon">
+  <link th:src="@{assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link th:href="@{https://fonts.gstatic.com}" rel="preconnect">
+  <link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link th:href="@{assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link th:href="@{assets/vendor/quill/quill.snow.css}" rel="stylesheet">
+  <link th:href="@{assets/vendor/quill/quill.bubble.css}" rel="stylesheet">
+  <link th:href="@{assets/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link th:href="@{assets/vendor/simple-datatables/style.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{assets/css/style.css}" rel="stylesheet">
+
+  <script type="text/javascript" th:src="@{js/hardware1.js}"></script>
+
+  <style>
+    body {
+      color: #404E67;
+      background: #F5F7FA;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .table-wrapper {
+      width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .table-title {
+      padding-bottom: 10px;
+      margin: 0 0 10px;
+    }
+    .table-title h2 {
+      margin: 6px 0 0;
+      font-size: 22px;
+    }
+    .table-title .add-new {
+      float: right;
+      height: 30px;
+      font-weight: bold;
+      font-size: 12px;
+      text-shadow: none;
+      min-width: 100px;
+      border-radius: 50px;
+      line-height: 13px;
+    }
+    .table-title .add-new i {
+      margin-right: 4px;
+    }
+    table.table {
+      table-layout: fixed;
+    }
+    table.table tr th, table.table tr td {
+      border-color: #e9e9e9;
+    }
+    table.table th i {
+      font-size: 13px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    table.table th:last-child {
+      width: 100px;
+    }
+    table.table td a {
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 5px;
+      min-width: 24px;
+    }
+    table.table td a.add {
+      color: #27C46B;
+    }
+    table.table td a.edit {
+      color: #FFC107;
+    }
+    table.table td a.delete {
+      color: #E34724;
+    }
+    table.table td i {
+      font-size: 19px;
+    }
+    table.table td a.add i {
+      font-size: 24px;
+      margin-right: -1px;
+      position: relative;
+      top: 3px;
+    }
+    table.table .form-control {
+      height: 32px;
+      line-height: 32px;
+      box-shadow: none;
+      border-radius: 2px;
+    }
+    table.table .form-control.error {
+      border-color: #f50000;
+    }
+    table.table td .add {
+      display: none;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+  <div class="d-flex align-items-center justify-content-between">
+    <a th:href="@{Welcome}" class="logo d-flex align-items-center">
+      <img th:src="@{img/bipsync.png}" alt="" style="width:40px;height:80px;">
+      <span class="d-none d-lg-block">Bipsync</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
+
+
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <li class="nav-item dropdown">
+
+        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="badge bg-primary badge-number">2</span>
+        </a><!-- End Notification Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          <li class="dropdown-header">
+            You have 2 new notifications
+            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-info-circle text-primary"></i>
+            <div>
+              <h4>Employee1</h4>
+              <p>Laptop Application</p>
+              <p>30 min. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-info-circle text-primary"></i>
+            <div>
+              <h4>Employee1</h4>
+              <p>License Application</p>
+              <p>2 hr. ago</p>
+            </div>
+          </li>
+        </ul><!-- End Notification Dropdown Items -->
+      </li><!-- End Notification Nav -->
+
+
+      </li><!-- End Messages Nav -->
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img th:src="@{assets/img/profile-img.jpg}" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+        </a><!-- End Profile Iamge Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          <li class="dropdown-header">
+            <h6>Kevin Anderson</h6>
+            <span>Web Designer</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" th:href="@{Profile}">
+              <i class="bi bi-person"></i>
+              <span>My Profile</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>
+                 <form action="#" th:action="@{logout}" method = "POST">
+                    <input type ="submit" value="Log out"/>
+                 </form>
+                </span>
+            </a>
+          </li>
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+    </ul>
+  </nav><!-- End Icons Navigation -->
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" th:href="@{SoftwareTable}">
+        <i class="bi bi-grid"></i>
+        <span>Software</span>
+      </a>
+    </li><!-- End Tables Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" th:href="@{HardwareView}">
+        <i class="bi bi-grid"></i>
+        <span>Hardware - Cardiff</span>
+      </a>
+    </li><!-- End Tables Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" th:href="@{UserInfo}">
+        <i class="bi bi-grid"></i>
+        <span>User Information</span>
+      </a>
+    </li><!-- End User information Page Nav -->
+
+
+    <li class="nav-heading">Pages</li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" th:href="@{Profile}">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+    </li><!-- End Profile Page Nav -->
+  </ul>
+</aside><!-- End Sidebar-->
+
+<a th:href="@{/SoftwarePaymentCreate}">Create</a>
+<input type="submit" value="Create"/>
+</form>
+
+<main id="main" class="main">
+
+  <div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a th:href="@{Welcome}">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section dashboard">
+    <div class="row">
+
+      <!-- Recent Sales -->
+      <div class="col-12">
+        <div class="card recent-sales overflow-auto">
+
+          <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              <li class="dropdown-header text-start">
+                <h6>Filter</h6>
+              </li>
+
+              <li><a class="dropdown-item" href="#">Today</a></li>
+              <li><a class="dropdown-item" href="#">This Month</a></li>
+              <li><a class="dropdown-item" href="#">This Year</a></li>
+            </ul>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Recent </h5><span></span>
+
+            <div class="container">
+              <div class="table-wrapper">
+                <div class="table-title">
+                  <div class="row">
+                    <div id="hardwareTitle" class="col-sm-8"><h2>Hardware <b>Details</b></h2></div>
+                    <div class="col-sm-4">
+                      <a type="button" class="btn btn-info add-new" href="/HardwareCreate"><i class="fa fa-plus"></i> Add New</a>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-bordered">
+                  <thead>
+                  <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Hardware</td>
+                    <td>Availability</td>
+                    <td>Check-In</td>
+                    <td>Operation</td>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr th:each="hardware: ${hardware}">
+                    <td th:text="${hardware.id}" id="id"></td>
+                    <td th:text="${hardware.name}" id="name"></td>
+                    <td th:text="${hardware.hardware}" id="hardware"></td>
+                    <td th:text="${hardware.availability}" id="availability"></td>
+                    <td th:text="${hardware.checkin}" id="checkin"></td>
+                    <td>
+                      <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                      <a class="edit" title="Edit" data-toggle="tooltip" onclick="editRow(this)"><i class="material-icons">&#xE254;</i></a>
+                      <a class="delete" title="Delete" data-toggle="tooltip" th:attr="onclick=|deleteRow('${hardware.id}')|"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Recent Sales -->
+
+
+
+    </div><!-- End Right side columns -->
+
+    </div>mln dd
+  </section>
+
+</main><!-- End #main -->
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script th:src="@{assets/vendor/apexcharts/apexcharts.min.js}"></script>
+<script th:src="@{assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{assets/vendor/chart.js/chart.min.js}"></script>
+<script th:src="@{assets/vendor/echarts/echarts.min.js}"></script>
+<script th:src="@{assets/vendor/quill/quill.min.js}"></script>
+<script th:src="@{assets/vendor/simple-datatables/simple-datatables.js}"></script>
+<script th:src="@{assets/vendor/tinymce/tinymce.min.js}"></script>
+<script th:src="@{assets/vendor/php-email-form/validate.js}"></script>
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js}"></script>
+
+<!-- Template Main JS File -->
+<script th:src="@{assets/js/main.js}"></script>
+<!--<script src="/js/SoftwareTable.js"></script>-->
+<script th:src="@{js/hardwareView.js}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+body {
+    font-family: Gesta, Gesta, sans-serif; /* font-family from brand guidelines */
+    min-height: 95vh;
+    background: linear-gradient(to right, #05ED99, #2EC796); /* colors from brand guidelines */
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* login card */
+
+.login-card {
+    width: 430px;
+    background: rgba(255, 255, 255, .5);
+    padding: 3rem;
+    border-radius: 50px;
+    position: relative;
+}
+
+/* Bipsync logo */
+.login-card-logo {
+    margin-bottom: 0.1rem;
+}
+
+.login-card-logo img {
+    width: 300px;
+}
+
+/* login card */
+.login-card-logo,
+.login-card-header,
+.login-card-footer {
+    text-align: center;
+}
+
+.login-card a {
+    text-decoration: none;
+    color: #2A2731; /* color from brand guidelines */
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+/* login card header */
+.login-card-header {
+    margin-bottom: 0.9rem;
+}
+
+.login-card-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.login-card-header h1 + div {
+    font-size: calc(1rem * .8);
+    opacity: .8;
+}
+
+/* login card form */
+.login-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.login-card-form .form-item {
+    position: relative;
+}
+
+.login-card-form .form-item .form-item-icon {
+    position: absolute;
+    top: .82rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    opacity: .4;
+}
+
+.login-card-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.login-card-form .form-item-other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem * .8);
+    margin-bottom: .5rem;
+}
+
+/* login card footer */
+.login-card-footer {
+    margin-top: 1.5rem;
+    font-size: calc(1rem * .8);
+}
+
+/* Login Card Form Elements */
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="email"] {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+    transition: background .5s;
+}
+
+.login-card input:focus {
+    background: #F7F7F7; /* color from brand guidelines */
+}
+
+.login-card input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2A2731; /* color from brand guidelines */
+}
+
+.login-card button {
+    background: #2A2731; /* color from brand guidelines */
+    color: #F7F7F7; /* color from brand guidelines */
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+}
+
+.login-card button:hover {
+    background-color: #2A2731; /* color from brand guidelines */
+    cursor: pointer;
+}
+
+/* css reset */
+img {
+    max-width: 100%;
+}
+
+*,
+*::after {
+    box-sizing: border-box;
+}
+
+ol, ul, menu {
+    list-style: none;
+}
+
+/* re-sizes login boxes when size of window reduced */
+@media (max-width: 768px) {
+
+    body {
+        background-color: black;
+        padding: 2rem 0;
+    }
+
+    .login-card {
+        width: 250px;
+        padding: 2rem;
+    }
+}

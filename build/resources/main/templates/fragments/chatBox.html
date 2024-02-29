@@ -1,0 +1,35 @@
+<div th:fragment="chatbox">
+    <body>
+
+    <!-- Open form using JavaScript -->
+    <button class="open-button" onclick="openForm()">Contact Owner</button>
+
+    <div class="chat-popup" id="myForm">
+        <!-- Secure encryption of my linked email address (/40ca71d...) -->
+        <form action="https://formsubmit.co/a5a739c659b51d906ecf791e4cde3c53" class="form-container" method="POST">
+
+            <!-- Remove 'captcha' after form submission. Can be easily reinstated if required -->
+            <input name="_captcha" type="hidden" value="false">
+
+            <!-- 4 user inputs (first name, last name, ticket number and message) -->
+            <section>
+                <label for="fname"> First Name</label><br>
+                <input id="fname" name="First&nbsp;Name" type="text"><br>
+                <label for="sname">Last Name</label><br>
+                <input id="sname" name="Last&nbsp;Name" type="text">
+                <label for="ticket">Ticket Number</label><br>
+                <input id="ticket" name="Ticket&nbsp;Number" type="text">
+            </section>
+
+            <textarea name="Message" placeholder="Type message here..." required></textarea>
+
+            <button class="btn" type="submit">Send</button>
+
+            <!-- Close form using JavaScript -->
+            <button class="btn cancel" onclick="closeForm()" type="button">Close</button>
+
+        </form>
+    </div>
+    <link href="/css/ChatBoxStyling.css" rel="stylesheet">
+    <script src="/js/ChatBox.js"></script>
+</div>

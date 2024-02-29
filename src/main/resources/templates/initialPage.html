@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="/img/bipsync.png" rel="icon" type="image/x-icon">
+
+  <link href="/css/initialPageStyle.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"> <!-- latest version of browser -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+<div class = "container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div id="optionText">
+      <div id="logo">
+        <img id="bipLogo" alt="logo" src="/img/logo.PNG" width="200">
+      </div>
+      <h2>Please choose a login option</h2>
+      <div id="middle" class="col">
+        <button id="admin" class="btn btn-secondary" th:onclick="|window.location.href='@{/Welcome}'|" type="button">Admin</button>
+        <button id="super" class="btn btn-secondary" th:onclick="|window.location.href='@{/WelcomeSuper}'|" type="button">Super
+          Admin
+        </button>
+      </div>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

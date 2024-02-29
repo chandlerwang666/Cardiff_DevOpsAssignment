@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hardware Table</title>
+</head>
+
+<body>
+
+<main>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Hardware</td>
+            <td>Availability</td>
+            <td>Check-In</td>
+        </tr>
+        <tr th:each="hardware: ${hardware}">
+            <td th:text="${hardware.id}"></td>
+            <td th:text="${hardware.name}"></td>
+            <td th:text="${hardware.hardware}"></td>
+            <td th:text="${hardware.availability}"></td>
+            <td th:text="${hardware.checkin}"></td>
+        </tr>
+    </table>
+
+</main>
+
+</body>
+</html>

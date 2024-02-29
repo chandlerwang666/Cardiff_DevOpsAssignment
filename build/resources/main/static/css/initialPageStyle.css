@@ -1,0 +1,32 @@
+#middle{
+    text-align: center;
+    position: relative;
+    top: 10px;
+    padding-right: 10px;
+
+}
+#optionText{
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+#bipLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+body{
+    font-family: Gesta, Gesta, sans-serif;
+    background-image: url("../img/mountains.jpg");
+    background-size: 100%;
+
+}
+#logo{
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+#optionText2{
+    top:20px;
+}

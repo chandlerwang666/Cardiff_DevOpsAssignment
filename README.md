@@ -1,5 +1,35 @@
-# ClientProject
+# Team 6 – Software and Asset Management
 
+<!--
+Developers
+
+Lee Parsons
+Joseph McSweeney
+Zhenze Weng
+Opeyemi Ayanola
+Yukun Zhao
+
+Project Brief
+
+This project is an inventory tracking system for Bipsync, a research management software company. 
+The webpage will be mainly used by the IT Manager to keep track of all IT assets, including laptops, monitors, home office equipment and software licenses.  
+
+Login Information
+Admin Username = admin
+Admin Password = password
+Super Username = super
+Super Password = password
+
+To run the project:
+
+Clone the repository here
+Open the Gradle tab on the right hand side.
+Under ‘Tasks’ and ‘build’, click on ‘clean’
+Under ‘Tasks’ and ‘application’, click on ‘bootRun’
+Open your browser and enter ‘localhost:8080’
+Welcome to our page.
+
+-->
 
 
 ## Getting started
@@ -15,14 +45,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://git.cardiff.ac.uk/c23087264/clientproject.git
+git remote add origin https://git.cardiff.ac.uk/c22046385/team-6-software-and-asset-management.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://git.cardiff.ac.uk/c23087264/clientproject/-/settings/integrations)
+- [ ] [Set up project integrations](https://git.cardiff.ac.uk/c22046385/team-6-software-and-asset-management/-/settings/integrations)
 
 ## Collaborate with your team
 
@@ -30,14 +60,14 @@ git push -uf origin main
 - [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
 - [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
 - [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
 ## Test and Deploy
 
 Use the built-in continuous integration in GitLab.
 
 - [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
 - [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
 - [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
 - [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
@@ -46,10 +76,9 @@ Use the built-in continuous integration in GitLab.
 
 # Editing this README
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
 ## Suggestions for a good README
-
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name

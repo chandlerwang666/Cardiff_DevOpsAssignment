@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"> <!-- latest version of browser -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="/css/LoginStyle.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0"
+        rel="stylesheet"/>
+
+  <title>Login</title>
+  <link href="/img/bipsync.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+
+<div class="login-card-container">
+  <div class="login-card">
+    <div class="login-card-logo">
+      <img alt="logo" src="/img/logo.PNG" width="200">
+    </div>
+    <div class="login-card-header">
+      <h1>Admin</h1> <!-- type of user logging in -->
+    </div>
+    <form id = "form" name = "myForm" class="login-card-form" th:action="@{/Home}" method ="POST">
+      <div class="form-item">
+        <span class="form-item-icon material-symbols-rounded">mail</span>
+        <input  autofocus id="emailForm" placeholder="Enter username"
+                name="username" required type="text"> <!-- username input -->
+      </div>
+      <div class="form-item">
+        <span class="form-item-icon material-symbols-rounded">lock</span>
+        <input id="passwordForm" placeholder="Enter Password" required
+               name="password" type="password"> <!-- password input -->
+      </div>
+      <div class="form-item-other">
+        <div class="checkbox">
+          <input checked id="rememberMeCheckbox" type="checkbox">
+          <label for="rememberMeCheckbox">Remember me</label>
+        </div>
+        <a href="#">I forgot my password!</a>
+      </div>
+      <button id="SignIn" type="submit">Sign In</button>
+    </form>
+  </div>
+</div>
+
+</body>
+
+</html>
