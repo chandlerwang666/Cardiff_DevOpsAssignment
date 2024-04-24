@@ -111,4 +111,4 @@ echo gradle -v
 
 echo "build gradle..."
 gradle build
-gradle bootrun &
+gradle bootrun
