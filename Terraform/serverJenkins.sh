@@ -94,7 +94,7 @@ LpW5dSaI7oq+P/AAAAHElEK2MyMzA4NzI2NEBEU0ExMEY2MEE4OTcyNzcBAgMEBQY=
 chmod 400 vm_test.key
 ssh-agent bash -c 'ssh-add vm_test.key; git clone git@git.cardiff.ac.uk:c23087264/clientproject.git'
 
-cd clientproject/
+cd ~/clientproject/
 mysql -uroot -pcomsc < src/BuildDB.sql
 
 
@@ -110,6 +110,5 @@ export PATH=$PATH:/opt/gradle/gradle-7.6/bin
 echo gradle -v
 
 echo "build gradle..."
-cd clientproject
 gradle build
 gradle bootrun
