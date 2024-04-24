@@ -94,28 +94,6 @@ LpW5dSaI7oq+P/AAAAHElEK2MyMzA4NzI2NEBEU0ExMEY2MEE4OTcyNzcBAgMEBQY=
 chmod 400 vm_test.key
 ssh-agent bash -c 'ssh-add vm_test.key; git clone git@git.cardiff.ac.uk:c23087264/clientproject.git'
 
-echo "install Jenkins"
-# https://pkg.jenkins.io/redhat-stable/
-curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
-sudo yum install jenkins -y
-
-echo "installing gitlab server key... has to be added to the jenkins user home (~) dir "
-mkdir /var/lib/jenkins/.ssh
-sudo touch /var/lib/jenkins/.ssh/known_hosts
-sudo ssh-keyscan git.cardiff.ac.uk >> /var/lib/jenkins/.ssh/known_hosts
-sudo chmod 644 /var/lib/jenkins/.ssh/known_hosts
-
-
-# If you want jenkins on port 8081 so you can run your app on 8080 then change the default jenkins port.
-#(look up linux sed - it is really cool)
-# sudo sed -i 's/JENKINS_PORT="8080"/JENKINS_PORT="8081"/g' /etc/sysconfig/jenkins
-sudo systemctl start jenkins
-systemctl status jenkins
-sudo systemctl enable jenkins
-
 
 echo "Installing gradle..."
 # wget https://services.gradle.org/distributions/gradle-6.7.1-bin.zip
@@ -127,8 +105,5 @@ sudo unzip -d /opt/gradle gradle-7.6-bin.zip
 export PATH=$PATH:/opt/gradle/gradle-7.6/bin
 echo gradle -v
 
-echo "Installing terraform..."
-cd /home/rocky
-wget https://releases.hashicorp.com/terraform/1.1.5/terraform_1.1.5_linux_amd64.zip
-unzip terraform_1.1.5_linux_amd64.zip
-sudo mv terraform /usr/local/bin/
+echo "build gradle..."
+gradle bootrun
