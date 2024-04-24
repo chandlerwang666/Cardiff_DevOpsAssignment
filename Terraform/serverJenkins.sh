@@ -14,7 +14,11 @@ sudo dnf install mariadb-server -y
 sudo systemctl start mariadb
 sudo systemctl status mariadb
 sudo systemctl enable mariadb
-
+sudo dnf install git -y
+sudo dnf install unzip  -y
+sudo dnf install curl -y
+sudo yum install java-17-openjdk -y
+sudo dnf install wget -y
 
 echo "creating mysql_secure_installation.txt..."
 touch mysql_secure_installation.txt
@@ -34,23 +38,6 @@ Y
 echo "running mysql_secure_installation..."
 sudo mysql_secure_installation < mysql_secure_installation.txt
 
-sudo yum install wget -y
-sudo yum install unzip -y
-sudo yum install git -y
-
-echo "Installing Java 17..."
-sudo yum install java-17-openjdk-devel -y
-echo java --version
-
-echo "needs to be in root account"
-cd root
-
-touch .ssh/known_hosts
-ssh-keyscan git.cardiff.ac.uk >> .ssh/known_hosts
-chmod 644 .ssh/known_hosts
-
-echo "now needs to be in rocky user directory"
-cd /home/rocky
 cat << `EOF` >> vm_test.key
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
@@ -91,24 +78,43 @@ ovrDGeVepZ0S7pb4vbEgqBU8Ur2sAHCaXL3kjD2Utvcxn56D7pqMLEAMjO/kKqpxn61oQ4
 LpW5dSaI7oq+P/AAAAHElEK2MyMzA4NzI2NEBEU0ExMEY2MEE4OTcyNzcBAgMEBQY=
 -----END OPENSSH PRIVATE KEY-----
 `EOF`
+
 chmod 400 vm_test.key
+ssh-agent bash -c 'ssh-add vm_test.key'
+touch .ssh/known_hosts
+ssh-keyscan git.cardiff.ac.uk >> .ssh/known_hosts
+chmod 644 .ssh/known_hosts
 ssh-agent bash -c 'ssh-add vm_test.key; git clone git@git.cardiff.ac.uk:c23087264/clientproject.git'
-
 cd ~/clientproject/
-mysql -uroot -pcomsc < src/BuildDB.sql
+sudo mysql -u root < src/BuildDB.sql
 
+mysql -u root -e "USE mysql; UPDATE user SET password=PASSWORD('comsc') WHEREUser='root' AND Host = 'localhost'; FLUSH PRIVILEGES;"
 
+curl -O https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz
 
-echo "Installing gradle..."
-# wget https://services.gradle.org/distributions/gradle-6.7.1-bin.zip
-wget https://services.gradle.org/distributions/gradle-7.6-bin.zip
+tar zxvf openjdk-11.0.2_linux-x64_bin.tar.gz
+
+# sudo mv jdk-11.0.2/usr/local
+
+# export JAVA_HOME=/usr/local/jdk-11.0.2
+# export PATH=$PATH:$JAVA_HOME/bin
+
+sudo yum install jave-17-openjdk -y
+
+wget https://services.gradle.org/distributions/gradle-7.6-bin.zip #-P /tmp
+
 sudo mkdir /opt/gradle
-# sudo unzip -d /opt/gradle gradle-6.7.1-bin.zip
-# export PATH=$PATH:/opt/gradle/gradle-6.7.1/bin
+# cd ..
+# cd ..
+# cd ..
+# cd tmp
 sudo unzip -d /opt/gradle gradle-7.6-bin.zip
-export PATH=$PATH:/opt/gradle/gradle-7.6/bin
-echo gradle -v
 
-echo "build gradle..."
+
+export PATH=$PATH:/opt/gradle/gradle-7.6/bin
+
+# cd $HOME/clientproject
+
 gradle build
+gradle test
 gradle bootrun
