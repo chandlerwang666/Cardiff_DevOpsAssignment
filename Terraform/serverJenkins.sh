@@ -110,5 +110,6 @@ export PATH=$PATH:/opt/gradle/gradle-7.6/bin
 echo gradle -v
 
 echo "build gradle..."
+cd clientproject
 gradle build
 gradle bootrun
