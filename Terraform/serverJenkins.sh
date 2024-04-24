@@ -94,6 +94,10 @@ LpW5dSaI7oq+P/AAAAHElEK2MyMzA4NzI2NEBEU0ExMEY2MEE4OTcyNzcBAgMEBQY=
 chmod 400 vm_test.key
 ssh-agent bash -c 'ssh-add vm_test.key; git clone git@git.cardiff.ac.uk:c23087264/clientproject.git'
 
+cd clientproject/
+mysql -uroot -pcomsc < src/BuildDB.sql
+
+
 
 echo "Installing gradle..."
 # wget https://services.gradle.org/distributions/gradle-6.7.1-bin.zip
