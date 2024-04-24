@@ -91,7 +91,7 @@ LpW5dSaI7oq+P/AAAAHElEK2MyMzA4NzI2NEBEU0ExMEY2MEE4OTcyNzcBAgMEBQY=
 chmod 400 vm_test.key
 ssh-agent bash -c 'ssh-add vm_test.key; git clone git@git.cardiff.ac.uk:c23087264/clientproject.git'
 
-cd mscdevopstakeaway22_23/
+cd clientproject/
 mysql -uroot -pcomsc < src/BuildDB.sql
 
 sudo yum install java-17-openjdk -y
