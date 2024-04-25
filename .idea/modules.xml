@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/G6ClientProject.main.iml" filepath="$PROJECT_DIR$/.idea/modules/G6ClientProject.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.G6ClientProject.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.G6ClientProject.main.iml" />
     </modules>
   </component>
 </project>
