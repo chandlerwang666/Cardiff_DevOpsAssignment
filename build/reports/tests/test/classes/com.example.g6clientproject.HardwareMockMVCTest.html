@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - HardwareMockMVCTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>HardwareMockMVCTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.g6clientproject.html">com.example.g6clientproject</a> &gt; HardwareMockMVCTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.190s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getSoftwareTest()</td>
+<td class="success">0.129s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testHome()</td>
+<td class="success">0.061s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-04-26 01:47:54.043  INFO 27116 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.g6clientproject.HardwareMockMVCTest], using SpringBootContextLoader
+2024-04-26 01:47:54.044  INFO 27116 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.g6clientproject.HardwareMockMVCTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-04-26 01:47:54.044  INFO 27116 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.g6clientproject.HardwareMockMVCTest]: HardwareMockMVCTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-26 01:47:54.050  INFO 27116 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.g6clientproject.G6ClientProjectApplication for test class com.example.g6clientproject.HardwareMockMVCTest
+2024-04-26 01:47:54.051  INFO 27116 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-04-26 01:47:54.052  INFO 27116 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@72373e0b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78ffb0ca, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@77f8dda2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7b934a96, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@301fe489, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35e37ba0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@447b573, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@65618897, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2a95031e, org.springframework.test.context.event.EventPublishingTestExecutionListener@4054397, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3dd09249, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@541c9054, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5613e43a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@78a41c94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@41df8b13, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@71f12d4c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@388a357c]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.6)
+
+2024-04-26 01:47:54.075  INFO 27116 --- [    Test worker] c.e.g6clientproject.HardwareMockMVCTest  : Starting HardwareMockMVCTest using Java 17.0.9 on WQM-AW with PID 27116 (started by jy_wq in C:\Users\jy_wq\IdeaProjects\clientproject)
+2024-04-26 01:47:54.075  INFO 27116 --- [    Test worker] c.e.g6clientproject.HardwareMockMVCTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-04-26 01:47:54.383  INFO 27116 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-04-26 01:47:54.384  INFO 27116 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-04-26 01:47:54.593  INFO 27116 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@248e6496, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1002e64a, org.springframework.security.web.context.SecurityContextPersistenceFilter@45dc01ca, org.springframework.security.web.header.HeaderWriterFilter@14200fed, org.springframework.security.web.authentication.logout.LogoutFilter@4f6a501c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d5b1786, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c25ed81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8eec68f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4acd2e10, org.springframework.security.web.session.SessionManagementFilter@59d768de, org.springframework.security.web.access.ExceptionTranslationFilter@720574a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@312d7705]
+2024-04-26 01:47:54.830  INFO 27116 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-26 01:47:54.830  INFO 27116 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-26 01:47:54.831  INFO 27116 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-04-26 01:47:55.340  INFO 27116 --- [    Test worker] c.e.g6clientproject.HardwareMockMVCTest  : Started HardwareMockMVCTest in 1.282 seconds (JVM running for 7.926)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /Home
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.g6clientproject.controller.GeneralController
+           Method = com.example.g6clientproject.controller.GeneralController#login()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = Login
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;&gt; &lt;!-- latest version of browser --&gt;
+  &lt;meta content=&quot;width=device-width, initial-scale=1.0&quot; name=&quot;viewport&quot;&gt;
+  &lt;link href=&quot;/css/LoginStyle.css&quot; rel=&quot;stylesheet&quot;/&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0&quot;
+        rel=&quot;stylesheet&quot;/&gt;
+
+  &lt;title&gt;Login&lt;/title&gt;
+  &lt;link href=&quot;/img/bipsync.png&quot; rel=&quot;icon&quot; type=&quot;image/x-icon&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;login-card-container&quot;&gt;
+  &lt;div class=&quot;login-card&quot;&gt;
+    &lt;div class=&quot;login-card-logo&quot;&gt;
+      &lt;img alt=&quot;logo&quot; src=&quot;/img/logo.PNG&quot; width=&quot;200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;login-card-header&quot;&gt;
+      &lt;h1&gt;Admin&lt;/h1&gt; &lt;!-- type of user logging in --&gt;
+    &lt;/div&gt;
+    &lt;form id = &quot;form&quot; name = &quot;myForm&quot; class=&quot;login-card-form&quot; action=&quot;/Home&quot; method =&quot;POST&quot;&gt;
+      &lt;div class=&quot;form-item&quot;&gt;
+        &lt;span class=&quot;form-item-icon material-symbols-rounded&quot;&gt;mail&lt;/span&gt;
+        &lt;input  autofocus id=&quot;emailForm&quot; placeholder=&quot;Enter username&quot;
+                name=&quot;username&quot; required type=&quot;text&quot;&gt; &lt;!-- username input --&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-item&quot;&gt;
+        &lt;span class=&quot;form-item-icon material-symbols-rounded&quot;&gt;lock&lt;/span&gt;
+        &lt;input id=&quot;passwordForm&quot; placeholder=&quot;Enter Password&quot; required
+               name=&quot;password&quot; type=&quot;password&quot;&gt; &lt;!-- password input --&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-item-other&quot;&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+          &lt;input checked id=&quot;rememberMeCheckbox&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;rememberMeCheckbox&quot;&gt;Remember me&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot;&gt;I forgot my password!&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;button id=&quot;SignIn&quot; type=&quot;submit&quot;&gt;Sign In&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /HardwareView
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]}
+
+Handler:
+             Type = com.example.g6clientproject.controller.HardwareController
+           Method = com.example.g6clientproject.controller.HardwareController#search()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = HardwareTable
+             View = null
+        Attribute = hardware
+            value = [com.example.g6clientproject.DTO.HardwareDTO@73ac8829, com.example.g6clientproject.DTO.HardwareDTO@53ca55c]
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta content=&quot;width=device-width, initial-scale=1.0&quot; name=&quot;viewport&quot;&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;title&gt;Bipsync Asset Register&lt;/title&gt;
+  &lt;meta content=&quot;&quot; name=&quot;description&quot;&gt;
+  &lt;meta content=&quot;&quot; name=&quot;keywords&quot;&gt;
+  &lt;link href=&quot;/img/bipsync.png&quot; rel=&quot;icon&quot; type=&quot;image/x-icon&quot;&gt;
+
+  &lt;!-- Favicons --&gt;
+  &lt;link src=&quot;assets/img/favicon.png&quot; rel=&quot;icon&quot;&gt;
+  &lt;link src=&quot;assets/img/apple-touch-icon.png&quot; rel=&quot;apple-touch-icon&quot;&gt;
+
+  &lt;!-- Google Fonts --&gt;
+  &lt;link href=&quot;https://fonts.gstatic.com&quot; rel=&quot;preconnect&quot;&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&quot; rel=&quot;stylesheet&quot;&gt;
+
+  &lt;!-- Vendor CSS Files --&gt;
+  &lt;link href=&quot;assets/vendor/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;assets/vendor/bootstrap-icons/bootstrap-icons.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;assets/vendor/boxicons/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;assets/vendor/quill/quill.snow.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;assets/vendor/quill/quill.bubble.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;assets/vendor/remixicon/remixicon.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;assets/vendor/simple-datatables/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+  &lt;!-- Template Main CSS File --&gt;
+  &lt;link href=&quot;assets/css/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/hardware1.js&quot;&gt;&lt;/script&gt;
+
+  &lt;style&gt;
+    body {
+      color: #404E67;
+      background: #F5F7FA;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .table-wrapper {
+      width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .table-title {
+      padding-bottom: 10px;
+      margin: 0 0 10px;
+    }
+    .table-title h2 {
+      margin: 6px 0 0;
+      font-size: 22px;
+    }
+    .table-title .add-new {
+      float: right;
+      height: 30px;
+      font-weight: bold;
+      font-size: 12px;
+      text-shadow: none;
+      min-width: 100px;
+      border-radius: 50px;
+      line-height: 13px;
+    }
+    .table-title .add-new i {
+      margin-right: 4px;
+    }
+    table.table {
+      table-layout: fixed;
+    }
+    table.table tr th, table.table tr td {
+      border-color: #e9e9e9;
+    }
+    table.table th i {
+      font-size: 13px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    table.table th:last-child {
+      width: 100px;
+    }
+    table.table td a {
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 5px;
+      min-width: 24px;
+    }
+    table.table td a.add {
+      color: #27C46B;
+    }
+    table.table td a.edit {
+      color: #FFC107;
+    }
+    table.table td a.delete {
+      color: #E34724;
+    }
+    table.table td i {
+      font-size: 19px;
+    }
+    table.table td a.add i {
+      font-size: 24px;
+      margin-right: -1px;
+      position: relative;
+      top: 3px;
+    }
+    table.table .form-control {
+      height: 32px;
+      line-height: 32px;
+      box-shadow: none;
+      border-radius: 2px;
+    }
+    table.table .form-control.error {
+      border-color: #f50000;
+    }
+    table.table td .add {
+      display: none;
+    }
+  &lt;/style&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;!-- ======= Header ======= --&gt;
+&lt;header id=&quot;header&quot; class=&quot;header fixed-top d-flex align-items-center&quot;&gt;
+
+  &lt;div class=&quot;d-flex align-items-center justify-content-between&quot;&gt;
+    &lt;a href=&quot;Welcome&quot; class=&quot;logo d-flex align-items-center&quot;&gt;
+      &lt;img src=&quot;img/bipsync.png&quot; alt=&quot;&quot; style=&quot;width:40px;height:80px;&quot;&gt;
+      &lt;span class=&quot;d-none d-lg-block&quot;&gt;Bipsync&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;i class=&quot;bi bi-list toggle-sidebar-btn&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;&lt;!-- End Logo --&gt;
+
+
+  &lt;nav class=&quot;header-nav ms-auto&quot;&gt;
+    &lt;ul class=&quot;d-flex align-items-center&quot;&gt;
+
+      &lt;li class=&quot;nav-item d-block d-lg-none&quot;&gt;
+        &lt;a class=&quot;nav-link nav-icon search-bar-toggle &quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;bi bi-search&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;&lt;!-- End Search Icon--&gt;
+
+      &lt;li class=&quot;nav-item dropdown&quot;&gt;
+
+        &lt;a class=&quot;nav-link nav-icon&quot; href=&quot;#&quot; data-bs-toggle=&quot;dropdown&quot;&gt;
+          &lt;i class=&quot;bi bi-bell&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;badge bg-primary badge-number&quot;&gt;2&lt;/span&gt;
+        &lt;/a&gt;&lt;!-- End Notification Icon --&gt;
+
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications&quot;&gt;
+          &lt;li class=&quot;dropdown-header&quot;&gt;
+            You have 2 new notifications
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge rounded-pill bg-primary p-2 ms-2&quot;&gt;View all&lt;/span&gt;&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;hr class=&quot;dropdown-divider&quot;&gt;
+          &lt;/li&gt;
+
+          &lt;li class=&quot;notification-item&quot;&gt;
+            &lt;i class=&quot;bi bi-info-circle text-primary&quot;&gt;&lt;/i&gt;
+            &lt;div&gt;
+              &lt;h4&gt;Employee1&lt;/h4&gt;
+              &lt;p&gt;Laptop Application&lt;/p&gt;
+              &lt;p&gt;30 min. ago&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;hr class=&quot;dropdown-divider&quot;&gt;
+          &lt;/li&gt;
+
+          &lt;li class=&quot;notification-item&quot;&gt;
+            &lt;i class=&quot;bi bi-info-circle text-primary&quot;&gt;&lt;/i&gt;
+            &lt;div&gt;
+              &lt;h4&gt;Employee1&lt;/h4&gt;
+              &lt;p&gt;License Application&lt;/p&gt;
+              &lt;p&gt;2 hr. ago&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- End Notification Dropdown Items --&gt;
+      &lt;/li&gt;&lt;!-- End Notification Nav --&gt;
+
+
+      &lt;/li&gt;&lt;!-- End Messages Nav --&gt;
+
+      &lt;li class=&quot;nav-item dropdown pe-3&quot;&gt;
+
+        &lt;a class=&quot;nav-link nav-profile d-flex align-items-center pe-0&quot; href=&quot;#&quot; data-bs-toggle=&quot;dropdown&quot;&gt;
+          &lt;img src=&quot;assets/img/profile-img.jpg&quot; alt=&quot;Profile&quot; class=&quot;rounded-circle&quot;&gt;
+          &lt;span class=&quot;d-none d-md-block dropdown-toggle ps-2&quot;&gt;K. Anderson&lt;/span&gt;
+        &lt;/a&gt;&lt;!-- End Profile Iamge Icon --&gt;
+
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-arrow profile&quot;&gt;
+          &lt;li class=&quot;dropdown-header&quot;&gt;
+            &lt;h6&gt;Kevin Anderson&lt;/h6&gt;
+            &lt;span&gt;Web Designer&lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;hr class=&quot;dropdown-divider&quot;&gt;
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a class=&quot;dropdown-item d-flex align-items-center&quot; href=&quot;Profile&quot;&gt;
+              &lt;i class=&quot;bi bi-person&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;My Profile&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;hr class=&quot;dropdown-divider&quot;&gt;
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a class=&quot;dropdown-item d-flex align-items-center&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;bi bi-box-arrow-right&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;
+                 &lt;form action=&quot;logout&quot; method = &quot;POST&quot;&gt;
+                    &lt;input type =&quot;submit&quot; value=&quot;Log out&quot;/&gt;
+                 &lt;/form&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- End Profile Dropdown Items --&gt;
+      &lt;/li&gt;&lt;!-- End Profile Nav --&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;&lt;!-- End Icons Navigation --&gt;
+&lt;/header&gt;&lt;!-- End Header --&gt;
+
+&lt;!-- ======= Sidebar ======= --&gt;
+&lt;aside id=&quot;sidebar&quot; class=&quot;sidebar&quot;&gt;
+
+  &lt;ul class=&quot;sidebar-nav&quot; id=&quot;sidebar-nav&quot;&gt;
+
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link collapsed&quot; href=&quot;SoftwareTable&quot;&gt;
+        &lt;i class=&quot;bi bi-grid&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Software&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;&lt;!-- End Tables Nav --&gt;
+
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link collapsed&quot; href=&quot;HardwareView&quot;&gt;
+        &lt;i class=&quot;bi bi-grid&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Hardware - Cardiff&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;&lt;!-- End Tables Nav --&gt;
+
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link collapsed&quot; href=&quot;UserInfo&quot;&gt;
+        &lt;i class=&quot;bi bi-grid&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;User Information&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;&lt;!-- End User information Page Nav --&gt;
+
+
+    &lt;li class=&quot;nav-heading&quot;&gt;Pages&lt;/li&gt;
+
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link collapsed&quot; href=&quot;Profile&quot;&gt;
+        &lt;i class=&quot;bi bi-person&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Profile&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;&lt;!-- End Profile Page Nav --&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;&lt;!-- End Sidebar--&gt;
+
+&lt;a href=&quot;/SoftwarePaymentCreate&quot;&gt;Create&lt;/a&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Create&quot;/&gt;
+&lt;/form&gt;
+
+&lt;main id=&quot;main&quot; class=&quot;main&quot;&gt;
+
+  &lt;div class=&quot;pagetitle&quot;&gt;
+    &lt;h1&gt;Dashboard&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ol class=&quot;breadcrumb&quot;&gt;
+        &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;Welcome&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;breadcrumb-item active&quot;&gt;Dashboard&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;&lt;!-- End Page Title --&gt;
+
+  &lt;section class=&quot;section dashboard&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+
+      &lt;!-- Recent Sales --&gt;
+      &lt;div class=&quot;col-12&quot;&gt;
+        &lt;div class=&quot;card recent-sales overflow-auto&quot;&gt;
+
+          &lt;div class=&quot;filter&quot;&gt;
+            &lt;a class=&quot;icon&quot; href=&quot;#&quot; data-bs-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;bi bi-three-dots&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-arrow&quot;&gt;
+              &lt;li class=&quot;dropdown-header text-start&quot;&gt;
+                &lt;h6&gt;Filter&lt;/h6&gt;
+              &lt;/li&gt;
+
+              &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Today&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;This Month&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;This Year&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;h5 class=&quot;card-title&quot;&gt;Recent &lt;/h5&gt;&lt;span&gt;&lt;/span&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+              &lt;div class=&quot;table-wrapper&quot;&gt;
+                &lt;div class=&quot;table-title&quot;&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                    &lt;div id=&quot;hardwareTitle&quot; class=&quot;col-sm-8&quot;&gt;&lt;h2&gt;Hardware &lt;b&gt;Details&lt;/b&gt;&lt;/h2&gt;&lt;/div&gt;
+                    &lt;div class=&quot;col-sm-4&quot;&gt;
+                      &lt;a type=&quot;button&quot; class=&quot;btn btn-info add-new&quot; href=&quot;/HardwareCreate&quot;&gt;&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt; Add New&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;table class=&quot;table table-bordered&quot;&gt;
+                  &lt;thead&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;ID&lt;/td&gt;
+                    &lt;td&gt;Name&lt;/td&gt;
+                    &lt;td&gt;Hardware&lt;/td&gt;
+                    &lt;td&gt;Availability&lt;/td&gt;
+                    &lt;td&gt;Check-In&lt;/td&gt;
+                    &lt;td&gt;Operation&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;/thead&gt;
+                  &lt;tbody&gt;
+                  &lt;tr&gt;
+                    &lt;td id=&quot;id&quot;&gt;1&lt;/td&gt;
+                    &lt;td id=&quot;name&quot;&gt;Tom Hardy&lt;/td&gt;
+                    &lt;td id=&quot;hardware&quot;&gt;Laptop&lt;/td&gt;
+                    &lt;td id=&quot;availability&quot;&gt;Yes&lt;/td&gt;
+                    &lt;td id=&quot;checkin&quot;&gt;30-12-2023&lt;/td&gt;
+                    &lt;td&gt;
+                      &lt;a class=&quot;add&quot; title=&quot;Add&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE03B;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;edit&quot; title=&quot;Edit&quot; data-toggle=&quot;tooltip&quot; onclick=&quot;editRow(this)&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE254;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot; onclick=&quot;deleteRow(&amp;#39;1&amp;#39;)&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE872;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;td id=&quot;id&quot;&gt;2&lt;/td&gt;
+                    &lt;td id=&quot;name&quot;&gt;Sarah Thomas&lt;/td&gt;
+                    &lt;td id=&quot;hardware&quot;&gt;Screen Monitor&lt;/td&gt;
+                    &lt;td id=&quot;availability&quot;&gt;No&lt;/td&gt;
+                    &lt;td id=&quot;checkin&quot;&gt;01-04-2024&lt;/td&gt;
+                    &lt;td&gt;
+                      &lt;a class=&quot;add&quot; title=&quot;Add&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE03B;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;edit&quot; title=&quot;Edit&quot; data-toggle=&quot;tooltip&quot; onclick=&quot;editRow(this)&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE254;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot; onclick=&quot;deleteRow(&amp;#39;2&amp;#39;)&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE872;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;/tbody&gt;
+                &lt;/table&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- End Recent Sales --&gt;
+
+
+
+    &lt;/div&gt;&lt;!-- End Right side columns --&gt;
+
+    &lt;/div&gt;mln dd
+  &lt;/section&gt;
+
+&lt;/main&gt;&lt;!-- End #main --&gt;
+
+
+&lt;a href=&quot;#&quot; class=&quot;back-to-top d-flex align-items-center justify-content-center&quot;&gt;&lt;i class=&quot;bi bi-arrow-up-short&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+&lt;!-- Vendor JS Files --&gt;
+&lt;script src=&quot;assets/vendor/apexcharts/apexcharts.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/bootstrap/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/quill/quill.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/simple-datatables/simple-datatables.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/tinymce/tinymce.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/vendor/php-email-form/validate.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Template Main JS File --&gt;
+&lt;script src=&quot;assets/js/main.js&quot;&gt;&lt;/script&gt;
+&lt;!--&lt;script src=&quot;/js/SoftwareTable.js&quot;&gt;&lt;/script&gt;--&gt;
+&lt;script src=&quot;js/hardwareView.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 26 Apr 2024, 01:47:55</p>
+</div>
+</div>
+</body>
+</html>
