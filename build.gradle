@@ -40,16 +40,3 @@ dependencies {
 
     }
 }
-
-
-test {
-    useJUnitPlatform()
-
-    reports {
-        junitXml.required = true
-        html.required = true
-    }
-}
-
-
-jar{ enabled = true }
