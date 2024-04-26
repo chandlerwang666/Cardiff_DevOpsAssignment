@@ -38,10 +38,10 @@ public class LWMVCTestForAddHardware {
     @Test
     @WithMockUser(username = "admin", password = "adminlogin", roles = "ADMIN")
     public void testAddHardwareSuccess() throws Exception {
-        // Setup the mock behavior
+
         when(hardwareRepo.addHardware(any(AddHardwareForm.class))).thenReturn(true);
 
-        // Perform the request
+
         mockMvc.perform(post("/Hardware")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                         .param("name", "New Hardware")
