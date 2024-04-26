@@ -21,13 +21,13 @@ public class SecurityFullContainerMockMVtests {
 
     @Test
     public void testNotAddSoftware() throws Exception {
-        this.mockMvc.perform(get("/SoftwareCreate")).andDo(print()).andExpect(status().isFound())
+        this.mockMvc.perform(get("/Welcome")).andDo(print()).andExpect(status().isFound())
                 .andExpect(header().string("Location", "http://localhost/Home"));
     }
 
     @Test
     public void testNotAddHardware() throws Exception {
-        this.mockMvc.perform(get("/HardwareCreate")).andDo(print()).andExpect(status().isFound())
+        this.mockMvc.perform(get("/HardwareView")).andDo(print()).andExpect(status().isFound())
                 .andExpect(header().string("Location", "http://localhost/Home"));
     }
 
