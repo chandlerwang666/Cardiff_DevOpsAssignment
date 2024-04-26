@@ -6,3 +6,5 @@ insert into Software (employee, software, availability, renewal) values ('Rocky 
 
 insert into Hardware (employee, hardware, availability, checkin) values ('Tom Hardy', 'Laptop', 'Yes', '30-12-2023');
 insert into Hardware (employee, hardware, availability, checkin) values ('Sarah Thomas', 'Screen Monitor', 'No', '01-04-2024');
+
+insert into User (`userNumber`, `accountType`, `gender`, `contactNumber`, `address`, `email`, `birthday`) values (1, 'admin', 'male', 898, '3 sharrold road, CF23 4FD', 'dave@bipSync.com', '1990-12-01');
