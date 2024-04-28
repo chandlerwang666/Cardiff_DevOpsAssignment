@@ -37,3 +37,5 @@ public class SecurityFullContainerMockMVtests {
                 .andExpect(header().string("Location", "http://localhost/Home"));
     }
 }
+
+//Integration test

@@ -32,3 +32,5 @@ public class UserMockMVCTest {
                 .andExpect(content().string(containsString("admin")));
     }
 }
+
+//Integration test

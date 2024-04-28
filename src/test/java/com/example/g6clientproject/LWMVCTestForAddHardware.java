@@ -53,3 +53,5 @@ public class LWMVCTestForAddHardware {
                 .andExpect(view().name("AllHardwareDetails"));  // Assuming "AllHardwareDetails" is the view name on successful addition
     }
 }
+
+//Integration test

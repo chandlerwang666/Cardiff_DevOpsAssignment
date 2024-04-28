@@ -32,3 +32,5 @@ public class HardwareMockMVCTest {
                 .andExpect(content().string(containsString("Tom Hardy")));
     }
 }
+
+//Integration test
